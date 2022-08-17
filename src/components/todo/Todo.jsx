@@ -10,10 +10,10 @@ const Todo = ({todo, setTodos, onRemoveHandler, onChangeHandler}) => {
                 <h3>{todo.body}</h3>
             </div>
 
-            <div>
-                <button onClick={()=> onRemoveHandler(todo.id)}>삭제하기</button>
+            <div className="but-set">
+                <button className="but" onClick={()=> onRemoveHandler(todo.id)}>삭제하기</button>
 
-                <button onClick={()=> onChangeHandler(todo.id)}>
+                <button className="but" onClick={()=> onChangeHandler(todo.id)}>
                     {todo.isDone? "취소" : "완료"}</button>
             </div>
         </div>

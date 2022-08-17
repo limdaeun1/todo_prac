@@ -1,4 +1,21 @@
-.add-form {
+.input-group {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.but{
+    background-color: teal;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 700;
+    height: 40px;
+    width: 140px;
+}
+
+.form{
     background-color: #eee;
     border-radius: 12px;
     justify-content: space-between;
@@ -6,8 +23,10 @@
     padding: 30px;
 }
 
-.add-form, .input-group {
-    align-items: center;
-    display: flex;
-    gap: 20px;
+.input {
+    border: none;
+    border-radius: 12px;
+    height: 40px;
+    padding: 0 12px;
+    width: 240px;
 }

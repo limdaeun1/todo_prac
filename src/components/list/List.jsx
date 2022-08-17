@@ -1,5 +1,6 @@
 import Todo from "../todo/Todo.jsx";
 import React from "react";
+import "./style.css";
 
 
 const List = ({todos, setTodos}) => {
@@ -19,8 +20,8 @@ const List = ({todos, setTodos}) => {
    
     return(
         <div>
-            <h1>하는중..</h1>
-            <div>
+            <h1>진행중 🔥</h1>
+            <div className ="warp">
             {todos.map
             (todo => todo.isDone === false
                 ?<Todo 
@@ -35,8 +36,8 @@ const List = ({todos, setTodos}) => {
             </div>
 
 
-            <h1>완료!</h1>
-            <div>
+            <h1>완료 🎉</h1>
+            <div className ="warp"v>
             {todos.map
             (todo => todo.isDone === true
                 ?<Todo 

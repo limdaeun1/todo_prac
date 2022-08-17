@@ -8,8 +8,8 @@ const TodoList = () => {
     const [todos, setTodos] = useState([
         {
             id: 1,
-            title: "리액트 공부하기",
-            body: "리액트 기초를 공부해봅시다.",
+            title: "리액트 복습하기",
+            body: "리액트 기초를 복습해봅시다.",
             isDone: false,
         },
         {
@@ -22,21 +22,13 @@ const TodoList = () => {
 
     console.log(todos)
 
-    const newTodo = (title, body) => {
-        const todo ={
-            id: todos.length+1,
-            title:title,
-            body:body,
-            isDone:false
-        }
-        setTodos([...todos, todo]);
-    }
+ 
     
 
     return (
         <Layout>
             <Header/>
-            <Form todos={todos} setTodos={setTodos} newTodo={newTodo}/>
+            <Form todos={todos} setTodos={setTodos} />
             <List todos={todos} setTodos={setTodos}/>
         </Layout>
     );
