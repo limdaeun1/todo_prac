@@ -1,20 +1,26 @@
 import React, {useState} from "react";
 import "./style.css";
-
+let number =4
 const Form = ({todos, setTodos}) => {
 
    const [title, setTitle] = useState("");
    const [body, setBody] = useState("");
    
+   
    const newTodo = (title, body) => {
+  
     const todo ={
-        id: todos.length+1,
+        id: 3,
         title:title,
         body:body,
         isDone:false
     }
-    setTodos([...todos, todo]);
+    setTodos([...todos, {...todo, id:number}]);
+    number++;
+    
+
 }
+
 
     
  
