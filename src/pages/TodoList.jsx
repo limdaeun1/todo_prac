@@ -20,10 +20,23 @@ const TodoList = () => {
         },
     ]);
 
+    console.log(todos)
+
+    const newTodo = (title, body) => {
+        const todo ={
+            id: todos.length+1,
+            title:title,
+            body:body,
+            isDone:false
+        }
+        setTodos([...todos, todo]);
+    }
+    
+
     return (
         <Layout>
             <Header/>
-            <Form/>
+            <Form todos={todos} setTodos={setTodos} newTodo={newTodo}/>
             <List todos={todos} setTodos={setTodos}/>
         </Layout>
     );

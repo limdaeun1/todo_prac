@@ -1,18 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import "./style.css";
 
-const Form = () => {
+const Form = ({todos, setTodos, newTodo}) => {
 
+   const [title, setTitle] = useState("");
+   const [body, setBody] = useState("");
+   
+  
+
+    
+ 
     return (
+        <>
         <form className ="add-form">
             <div className ="input-group">
                 <label>제목</label>
-                <input></input>
+                <input type="text" value={title} onChange={(event)=>{setTitle(event.target.value);}}>
+                </input>
                 <label>내용</label>
-                <input></input>
+                <input type="text" value={body} onChange={(event)=>{setBody(event.target.value);}}>
+                </input>    
             </div>
-            <button>추가하기</button>
+            
+            <button onClick={()=>newTodo(title,body)}>
+                
+                추가하기</button>
         </form>
+        </>
     );
 };
 
