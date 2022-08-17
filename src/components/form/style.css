@@ -1,0 +1,13 @@
+.add-form {
+    background-color: #eee;
+    border-radius: 12px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.add-form, .input-group {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
