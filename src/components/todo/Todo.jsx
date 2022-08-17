@@ -1,17 +1,20 @@
 import React from "react";
 import "./style.css";
 
-const Todo = () => {
+const Todo = ({todo, setTodos, onRemoveHandler, onChangeHandler}) => {
 
     return (
         <div className ="todo-container">
             <div>
-                <h2>리액트 공부하기</h2>
-                <h3>리액트 기초를 공부해봅시다</h3>
+                <h2>{todo.title}</h2>
+                <h3>{todo.body}</h3>
             </div>
+
             <div>
-                <button>삭제하기</button>
-                <button>완료</button>
+                <button onClick={()=> onRemoveHandler(todo.id)}>삭제하기</button>
+
+                <button onClick={()=> onChangeHandler(todo.id)}>
+                    {todo.isDone? "취소" : "완료"}</button>
             </div>
         </div>
     );
