@@ -23,7 +23,7 @@ const List = ({todos, setTodos}) => {
             <h1>진행중 🔥</h1>
             <div className ="warp">
             {todos.map
-            (todo => !todo.isDone 
+            (todo => !todo.isDone  
                 ?<Todo 
                 todo={todo} 
                 key={todo.id}
@@ -37,9 +37,9 @@ const List = ({todos, setTodos}) => {
 
 
             <h1>완료 🎉</h1>
-            <div className ="warp"v>
+            <div className ="warp">
             {todos.map
-            (todo => todo.isDone 
+            (todo => todo.isDone
                 ?<Todo 
                 todo={todo} 
                 key={todo.id}
